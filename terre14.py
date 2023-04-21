@@ -7,77 +7,73 @@
 #  3   8   9  12    --->    triée !
 # Yolooo            --->    nope, erreur !
 
-""" Input the list of values """
-"""
-# I will need to be able to mess with several arguments (no precise number ???) 
-#let's start this shit with 3 values
-a = int(input("a = "))
-b = int(input("b = "))
-c = int(input("c = "))
-intList = [a, b, c]
-"""
+# Recursive approach to check if an array is sorted or not
+""" NORMALY SORTED LIST - Function return 0 is a pair is found unsorted """
+def sortedOrNot(intList):
+    
+    # get the length
+    lenList =len(intList)
 
-""" Condition to determine which value is in the MIDDLE """
-"""
-# if the 3 values are the same, gives a error message:
-if a <= b and b <= c:
-    print("the list is in order")
-elif a >= b and b >= c:
-    print("the list is in order")
+    # Array has one or no element OR the rest is already checked and approved
+    if lenList == 1 or lenList == 0:
+        return True
 
-else:
-    print("NOPE ! this is not in order at all")
-"""
-#---------------------------------------------------------------------------------------------------------------------
+    # Recursion (the fuck is this ?) applied till last element
+    return intList[0] <= intList[1] and sortedOrNot(intList[1:])
 
-"""
-# now I must find a way to analyze this shit.
+""" REVERSE SORTED LIST - Function return 0 is a pair is found unsorted """
+def revSortedOrNot(intList):
+    
+    # get the length
+    lenList =len(intList)
 
-# idea is " for a length L " ---> " if array.index I is superior to I+" and " if I+ is superior to I++" ---> " list is in order"
-for x in intList:
-        if intList[0] <= intList[1]:
-            print("do something !!!")
-        else:
-            print("Fuuuuuuuuck !!!")
-"""
+    # Array has one or no element OR the rest is already checked and approved
+    if lenList == 1 or lenList == 0:
+        return True
 
-#---------------------------------------------------------------------------------------------------------------------
+    # Recursion (the fuck is this ?) applied till last element
+    return intList[0] >= intList[1] and revSortedOrNot(intList[-1:])
+
 print("Enter as many numbers as you want")
 print("Please, be careful to separate eah number by a space")
-userInput = input()
 # result example ---> "10 20 30"
+userInput = input()
 
-intList = userInput.rsplit(" ")
 # result example ---> ['10', '20', '30']
+intList = userInput.rsplit()
 
-print(intList)
+# Display the result
+if sortedOrNot(intList):
+    print(" This shit is really sorted now ?")
+elif revSortedOrNot(intList):
+    print("Sorted but in reverse")
+else:
+    print("fuck this shit, I'm out !")
 
-#lenList =len(intList)
-
+#--------------------------------------------------------------------------------------------------------------------------------------------
 # now I must find a way to analyze this shit.
 # idea is " for a length L " ---> " if array.index I is superior to I+" and " if I+ is superior to I++" ---> " list is in order"
-
-for x in intList:
-    if intList[0] <= intList[1]:
-        print("do something !!!")
-    elif intList[0] >= intList[1]:
-        print("do something else !!!")
-    #elif intList[0] <= len(intList) <= intList[-1]:
-    #    print(" Someone help me, this shit is driving me crazy !!!!   :-O ")
-    #elif intList[0] >= len(intList) >= intList[-1]:
-    #    print(" Je test n'importe quoi !!!!   :-O ")
-    elif intList[0] <= intList[+1]:
-        print(" WAZZUP !!!!!  :-D ")
-    elif intList[0] >= intList[+1]:
-        print(" PUTAIN DE MERDE !!!!  >:-O ")
-    else:
-        print("Fuuuuuuuuck !!!")
-
 """
-for y in intList[0]:
-    while y < lenList:
-        if y <= y+1:
-            print("test 'd'infériorité ! Liste croissante !")
-        elif y >= y+1:
-            print("test de supériorité ! Liste décroissante ! ")
+    # for 2 numbers
+if intList[0] <= intList[1]:
+    print("2 in ascending order !!!")
+elif intList[0] >= intList[1]:
+    print("2 in descending order!!!")
+# for 3 numbers
+elif intList[0] >= intList[1] and intList[1] <= intList[2]:
+    print("3 in ascending order !!!")
+elif intList[0] >= intList[1] and intList[1] >= intList[2]:
+    print("3 in descending order !!!")
+# for 4 numbers
+elif intList[0] >= intList[1] and intList[1] <= intList[2] and intList[2] <= intList[3]:
+    print("4 in ascending order !!!")
+elif intList[0] >= intList[1] and intList[1] >= intList[2] and intList[2] <= intList[3]:
+    print("4 in descending order !!!")
+# for 5 numbers
+elif intList[0] >= intList[1] and intList[1] <= intList[2] and intList[2] <= intList[3] and intList[3] <= intList[4]:
+    print("5 in ascending order !!!")
+elif intList[0] >= intList[1] and intList[1] >= intList[2] and intList[2] <= intList[3] and intList[3] <= intList[4]:
+    print("5 in descending order !!!")
+else:
+    print("HEEEEEEEEELLLLLLP !!!")
 """
