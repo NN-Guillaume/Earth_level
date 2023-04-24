@@ -8,11 +8,13 @@ def alphabet_from():
     alphabet = "a b c d e f g h i j k l m n o p q r s t u v w x y z"
     listAlpha = alphabet.rsplit(" ")
     #print(listAlpha)
-    myLetter = input()
+    myInput = input()
+    myLetter = myInput.lower()
     
     startingPoint = listAlpha.index(myLetter)    # put the starting letter (corresponding index) into a value
     resultat = listAlpha[startingPoint:]              # resultat = in listAlpha, from my input, print the remaining elements of the list.
     
     print(resultat)
 
-alphabet_from()
+while 1:
+    alphabet_from()
