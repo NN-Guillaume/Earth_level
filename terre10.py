@@ -11,6 +11,55 @@
 # divisible par 3 SI dernier chiffre == 3, 6 ou 9
 # divisible par 5 SI dernier chiffre == 0 ou 5
 
+import sys
+
+while 1:
+    myNum = int(sys.argv[1])
+    try:
+        if myNum == 0 or myNum == 1:
+            resultat = "%d n'est pas un nombre entier !" % (myNum)
+            print(resultat)
+            break
+
+        elif myNum == 2 or myNum == 3 or myNum == 5 or myNum == 7:
+            resultat = "%d est bien un nombre entier !" % (myNum)
+            print(resultat)
+            break
+
+        elif (myNum % 2 == 0) or (myNum % 2 == 2) or (myNum % 2 == 4) or (myNum % 2 == 5) or(myNum % 2 == 6) or (myNum % 2 == 8):
+            resultat = "%d n'est pas un nombre entier !" % (myNum)
+            print(resultat)
+            break
+
+        elif (myNum % 3 == 0) or (myNum % 3 == 3) or (myNum % 3 == 6) or (myNum % 3 == 9):
+            resultat = "%d n'est pas un nombre entier !" % (myNum)
+            print(resultat)
+            break
+
+        elif (myNum % 4 == 0) or (myNum % 4 == 2) or (myNum % 4 == 4) or (myNum % 4 == 5) or(myNum % 4 == 6) or (myNum % 4 == 8):
+            resultat = "%d n'est pas un nombre entier !" % (myNum)
+            print(resultat)
+            break
+
+        elif (myNum % 5 == 0) or (myNum % 5 == 5):
+            resultat = "%d n'est pas un nombre entier !" % (myNum)
+            print(resultat)
+            break
+
+        else:
+            resultat = " YES ! %d est bien un nombre entier !" % (myNum)
+            print(resultat)
+            break
+        
+    except ValueError:
+        print("Never trust the user !!!")
+
+
+
+
+
+# alternative with the "input" statement
+"""
 while 1:
     print("Please, select a number between 0 and 100")
     myNum = int(input("enter your number: "))
@@ -39,11 +88,14 @@ while 1:
         resultat = "%d n'est pas un nombre entier !" % (myNum)
         print(resultat)
 
+    elif type(myNum) != int:
+        print("you silly user !")
+
+    elif type(myNum) == str:
+        print("you silly user !")
+
     else:
         resultat = " YES ! %d est bien un nombre entier !" % (myNum)
         print(resultat)
+"""
 # I fucking did it !!! 
-
-# n'oublie pas de gérer les autres exceptions (never trust the user !!!)
-# pas de string
-# pas de float
