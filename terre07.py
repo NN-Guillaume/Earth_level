@@ -4,14 +4,16 @@
 
 import sys
 
-char_to_count = str(sys.argv[1])
+try:
+    char_to_count = str(sys.argv[1])
 
-""" gives you the length of a string"""
-def countString():
-    print(len(char_to_count))
+    """ gives you the length of a string"""
+    def countString():
+        print(len(char_to_count))
 
-countString()
-
+    countString()
+except ValueError:
+    print(" Error ")
 
 
 

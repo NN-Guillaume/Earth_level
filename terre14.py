@@ -8,49 +8,53 @@
 # Yolooo            --->    nope, erreur !
 
 
-# Recursive approach to check if an array is sorted or not
-###NORMALY SORTED LIST - Function return 0 is a pair is found unsorted
-def sortedOrNot(intList):
-    
-    # get the length
-    lenList =len(intList)
 
-    # Array has one or no element OR the rest is already checked and approved
-    if lenList == 1 or lenList == 0:
-        return True
+try:
+    # Recursive approach to check if an array is sorted or not
+    "NORMALY SORTED LIST - Function return 0 is a pair is found unsorted"
+    def sortedOrNot(intList):
+        
+        # get the length
+        lenList =len(intList)
 
-    # Recursion (the fuck is this ?) applied till last element
-    return intList[0] <= intList[1] and sortedOrNot(intList[1:])
+        # Array has one or no element OR the rest is already checked and approved
+        if lenList == 1 or lenList == 0:
+            return True
 
-###REVERSE SORTED LIST - Function return 0 is a pair is found unsorted
-def revSortedOrNot(intList):
-    
-    # get the length
-    lenList =len(intList)
+        # Recursion (the fuck is this ?) applied till last element
+        return intList[0] <= intList[1] and sortedOrNot(intList[1:])
 
-    # Array has one or no element OR the rest is already checked and approved
-    if lenList == 1 or lenList == 0:
-        return True
+    "REVERSE SORTED LIST - Function return 0 is a pair is found unsorted"
+    def revSortedOrNot(intList):
+        
+        # get the length
+        lenList =len(intList)
 
-    # Recursion (the fuck is this ?) applied till last element
-    return intList[0] >= intList[1] and revSortedOrNot(intList[-1:])
+        # Array has one or no element OR the rest is already checked and approved
+        if lenList == 1 or lenList == 0:
+            return True
 
-print("Enter as many numbers as you want")
-print("Please, be careful to separate eah number by a space")
-# result example ---> "10 20 30"
-userInput = input()
+        # Recursion (the fuck is this ?) applied till last element
+        return intList[0] >= intList[1] and revSortedOrNot(intList[-1:])
 
-# result example ---> ['10', '20', '30']
-intList = userInput.rsplit()
+    print("Enter as many numbers as you want")
+    print("Please, be careful to separate eah number by a space")
+    # result example ---> "10 20 30"
+    userInput = input()
 
-# Display the result
-if sortedOrNot(intList):
-    print(" This shit is really sorted now ?")
-elif revSortedOrNot(intList):
-    print("Sorted but in reverse")
-else:
-    print("fuck this shit, I'm out !")
+    # result example ---> ['10', '20', '30']
+    intList = userInput.rsplit()
 
+    # Display the result
+    if sortedOrNot(intList):
+        print(" This shit is really sorted now ?")
+    elif revSortedOrNot(intList):
+        print("Sorted but in reverse")
+    else:
+        print("fuck this shit, I'm out !")
+
+except ValueError:
+    print(" NOOOOOOPE ! ")
 
 
 

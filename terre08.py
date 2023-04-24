@@ -4,23 +4,23 @@
 
 import sys
 
-while True:
-    try:
+try:
+    while True:
         baseNumber = int(sys.argv[1])
         powerNumber = int(sys.argv[2])
         break
-    except ValueError:
-        print(" NOPE ! That is NOT an \"int\" !!!")
 
-def powerMath():
-    powerResult = baseNumber ** powerNumber
-    print(powerResult)
+    def powerMath():
+        powerResult = baseNumber ** powerNumber
+        print(powerResult)
 
-if powerNumber <= 0:
-    print("negative value are forbiden for the power number")
-else:
-    powerMath()
+    if powerNumber <= 0:
+        print("negative value are forbiden for the power number")
+    else:
+        powerMath()
 
+except ValueError:
+    print(" Wrong input ! ")
 
 
 

@@ -13,9 +13,12 @@
 
 import sys
 
-while 1:
-    myNum = int(sys.argv[1])
+loop = True
+
+while loop:
     try:
+        myNum = int(sys.argv[1])
+
         if myNum == 0 or myNum == 1:
             resultat = "%d n'est pas un nombre entier !" % (myNum)
             print(resultat)
@@ -53,6 +56,7 @@ while 1:
         
     except ValueError:
         print("Never trust the user !!!")
+        loop = False
 
 
 

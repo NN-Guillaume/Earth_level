@@ -6,27 +6,20 @@
 
 import sys
 
-randomNumber = int(sys.argv[1])
+try:
+    randomNumber = int(sys.argv[1])
+    square = randomNumber**2
 
-for x in range (100):
-    square = x**2
-    
-    if square == randomNumber:
-        result = "%d is the square root of %d" % (x, randomNumber)
-        print (result)
-        break
-    
     if randomNumber <= 0:
         print ("you can't go under 0")
-        break
 
-    if randomNumber >= 100:
-        print ("you can't go beyond 100")
-        break
+    else:
+        result = "%d is the square root of %d" % (square, randomNumber)
+        print (result)
 
-    if type(randomNumber) != int:
-        print ("Nope, you didn't used an INT")
-        break
+
+except ValueError:
+    print(" Wrong input ! ")
 
 #-------------------------------------------------------------------------------------------------------------------------------------
 
