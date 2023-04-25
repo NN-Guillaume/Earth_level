@@ -10,40 +10,13 @@ try:
     myHour = int(sys.argv[1])
     myMinute = int(sys.argv[2])
     symbol = ":"
-    indicator = str(sys.argv[3]) # automate this to define if it is AM or PM ?
+    indicator = str(sys.argv[3])  # automate this to define if it is AM or PM ?
     sillyGrade = indicator.upper()
-    newTime = [myHour, symbol, myMinute, sillyGrade ] # that is the working base
+    newTime = [myHour, symbol, myMinute, sillyGrade]  # that is the working base
 
-    morningHours = arr.array('i',[
-        00,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11
-    ])
+    morningHours = arr.array("i", [00, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
 
-    eveningHours = arr.array('i',[
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23
-    ])
-
+    eveningHours = arr.array("i", [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23])
 
     """ This part analyse the input and convert the hour (only the number) """
 
@@ -93,32 +66,27 @@ try:
                 if myHour == 11:
                     newTime[0] = eveningHours[11]
 
-
     """ This part of the code here define the AM or PM """
 
     if sillyGrade == "AM":
-        #remove AM
+        # remove AM
         newTime.pop(3)
     elif sillyGrade == "PM":
-        #remove PM
+        # remove PM
         newTime.pop(3)
     elif sillyGrade != "AM" or sillyGrade != "PM":
         newTime.clear()
         print("which moment of the day is this ?  :-)")
 
-
     """ Display the final result ! """
     # turn the array into a string, more eye-friendly to read.
-    displayTime = ' '.join([str(elem) for elem in newTime])
+    displayTime = " ".join([str(elem) for elem in newTime])
     # after all that mess, this display the converted hour into the console
     print(displayTime)
     # end !
 
 except ValueError:
     print(" Wrong input ! ")
-
-
-
 
 
 # alternative with the "input" statement
@@ -227,5 +195,5 @@ print(displayTime)
 """
 
 # The code is working BUT...
-#... I could implement some user imput verification...
-#... an make a sacrific by a fullmoon night to know how to automate some part of the code TT___TT
+# ... I could implement some user imput verification...
+# ... an make a sacrific by a fullmoon night to know how to automate some part of the code TT___TT

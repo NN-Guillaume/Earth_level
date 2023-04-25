@@ -2,20 +2,20 @@
 
 # Créer un programme qui détermine si une liste d'entiers est triée ou non.
 
-#exemples:   
+# exemples:
 #  9   8   3        --->    pas triée !
 #  3   8   9  12    --->    triée !
 # Yolooo            --->    nope, erreur !
 
 
-
 try:
     # Recursive approach to check if an array is sorted or not
     "NORMALY SORTED LIST - Function return 0 is a pair is found unsorted"
+
     def sortedOrNot(intList):
-        
+
         # get the length
-        lenList =len(intList)
+        lenList = len(intList)
 
         # Array has one or no element OR the rest is already checked and approved
         if lenList == 1 or lenList == 0:
@@ -25,10 +25,11 @@ try:
         return intList[0] <= intList[1] and sortedOrNot(intList[1:])
 
     "REVERSE SORTED LIST - Function return 0 is a pair is found unsorted"
+
     def revSortedOrNot(intList):
-        
+
         # get the length
-        lenList =len(intList)
+        lenList = len(intList)
 
         # Array has one or no element OR the rest is already checked and approved
         if lenList == 1 or lenList == 0:
@@ -55,8 +56,6 @@ try:
 
 except ValueError:
     print(" NOOOOOOPE ! ")
-
-
 
 
 # Gives instructions inside the console (doesn't works)

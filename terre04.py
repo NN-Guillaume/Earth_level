@@ -4,17 +4,18 @@
 
 import sys
 
-# Attention aux entiers négatifs !
 while True:
     try:
-        # input 
+        # input
         userNber = int(sys.argv[1])
-        print ("you have chose %d as number" % (userNber))
+        print("you have chose %d as number" % (userNber))
 
         if type(userNber) != int:
             print("Nope, you must choose a number")
         elif type(userNber) == str:
             print("no entry")
+        elif userNber == 0:
+            print(" That is a good question  :-)")
         elif userNber <= 0:
             print("negative input")
         else:
@@ -26,12 +27,8 @@ while True:
             print("Pair")
 
     except ValueError:
-            print(" NOPE ! That is not an INT !!!")
+        print(" NOPE ! That is not an INT !!!")
     break
-
-
-
-
 
 
 # alternative with the "input" statement

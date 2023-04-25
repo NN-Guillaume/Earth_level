@@ -8,14 +8,13 @@ try:
     char_to_count = str(sys.argv[1])
 
     """ gives you the length of a string"""
+
     def countString():
         print(len(char_to_count))
 
     countString()
 except ValueError:
     print(" Error ")
-
-
 
 
 # alternative with the "input" statement

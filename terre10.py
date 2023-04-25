@@ -29,17 +29,33 @@ while loop:
             print(resultat)
             break
 
-        elif (myNum % 2 == 0) or (myNum % 2 == 2) or (myNum % 2 == 4) or (myNum % 2 == 5) or(myNum % 2 == 6) or (myNum % 2 == 8):
+        elif (
+            (myNum % 2 == 0)
+            or (myNum % 2 == 2)
+            or (myNum % 2 == 4)
+            or (myNum % 2 == 5)
+            or (myNum % 2 == 6)
+            or (myNum % 2 == 8)
+        ):
             resultat = "%d n'est pas un nombre entier !" % (myNum)
             print(resultat)
             break
 
-        elif (myNum % 3 == 0) or (myNum % 3 == 3) or (myNum % 3 == 6) or (myNum % 3 == 9):
+        elif (
+            (myNum % 3 == 0) or (myNum % 3 == 3) or (myNum % 3 == 6) or (myNum % 3 == 9)
+        ):
             resultat = "%d n'est pas un nombre entier !" % (myNum)
             print(resultat)
             break
 
-        elif (myNum % 4 == 0) or (myNum % 4 == 2) or (myNum % 4 == 4) or (myNum % 4 == 5) or(myNum % 4 == 6) or (myNum % 4 == 8):
+        elif (
+            (myNum % 4 == 0)
+            or (myNum % 4 == 2)
+            or (myNum % 4 == 4)
+            or (myNum % 4 == 5)
+            or (myNum % 4 == 6)
+            or (myNum % 4 == 8)
+        ):
             resultat = "%d n'est pas un nombre entier !" % (myNum)
             print(resultat)
             break
@@ -53,13 +69,10 @@ while loop:
             resultat = " YES ! %d est bien un nombre entier !" % (myNum)
             print(resultat)
             break
-        
+
     except ValueError:
         print("Never trust the user !!!")
         loop = False
-
-
-
 
 
 # alternative with the "input" statement
@@ -102,4 +115,4 @@ while 1:
         resultat = " YES ! %d est bien un nombre entier !" % (myNum)
         print(resultat)
 """
-# I fucking did it !!! 
+# I fucking did it !!!

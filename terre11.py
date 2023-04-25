@@ -10,44 +10,20 @@ try:
     myHour = int(sys.argv[1])
     myMinute = int(sys.argv[2])
     symbol = ":"
-    newTime = [myHour, symbol, myMinute] # that is the working base
-    sillyHour = arr.array('i',[
-        00,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11
-    ])
-
+    newTime = [myHour, symbol, myMinute]  # that is the working base
+    sillyHour = arr.array(
+        "i",
+        [00, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    )
 
     """ This part analyse the input and convert the hour (only the number) """
-    for x in sillyHour:    
+    for x in sillyHour:
         if myHour == sillyHour.index(x):
-            #print("sillyHour value is matching !") # ne fonctionne pas à partir de 13h mais detecte deux fois le type 01hxx
+            # print("sillyHour value is matching !") # ne fonctionne pas à partir de 13h mais detecte deux fois le type 01hxx
             newTime[0] = sillyHour.index(myHour)
 
-
         elif myHour != sillyHour.index(x):
-            #print("sillyHour value is NOT matching !") # ne fonctionne pas à partir de 13h mais detecte deux fois le type 01hxx
+            # print("sillyHour value is NOT matching !") # ne fonctionne pas à partir de 13h mais detecte deux fois le type 01hxx
 
             # haven't found how to simplify this part...  :-(
             if myHour == 13:
@@ -84,34 +60,21 @@ try:
                 newTime[0] = sillyHour[23]
 
     if myHour <= 11:
-        #add index[5] to print "AM"
+        # add index[5] to print "AM"
         newTime.append(" AM")
     elif myHour >= 12:
-        #add index[5] to print "PM"
+        # add index[5] to print "PM"
         newTime.append(" PM")
 
-
-    #Display the final result ! 
+    # Display the final result !
     # turn the array into a string, more eye-friendly to read.
-    displayTime = ' '.join([str(elem) for elem in newTime])
+    displayTime = " ".join([str(elem) for elem in newTime])
     # after all that mess, this display the converted hour into the console
     print(displayTime)
     # end !
 
 except ValueError:
     print(" Wrong input ! ")
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # alternative with the "input" statement
@@ -210,10 +173,10 @@ print(displayTime)
 # end !
 """
 # The code is working BUT...
-#... I could implement some user imput verification...
-#... an make a sacrifice by a fullmoon night to know how to automate some part of the code TT___TT
+# ... I could implement some user imput verification...
+# ... an make a sacrifice by a fullmoon night to know how to automate some part of the code TT___TT
 
-#--------------------------------------------------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------------------------------------------------
 """ Those parts below were failing attempt to build the program """
 
 """

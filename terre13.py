@@ -2,7 +2,7 @@
 
 # Créer un programme qui prend en paramètre trois entiers et affiche la valeur du milieu
 
-#exemples:   
+# exemples:
 # 11  40  34  --->    le programme doit retourner 34
 #  2   1   3  --->    le programme doit retourner 34
 # 20  20  20  --->    le programme doit retourner une erreur
@@ -17,7 +17,7 @@ try:
 
     """ Condition to determine which value is in the MIDDLE """
     # if the 3 values are the same, gives a error message:
-    if val1 == val2 and val2 == val3 :
+    if val1 == val2 and val2 == val3:
         print("you have put the same number 3 times.")
 
     # ???
@@ -29,7 +29,6 @@ try:
         print(val1)
     elif val1 <= val2 and val1 >= val3:
         print(val1)
-
 
     # if val2 have the middle value --- DOESN'T WORKS !
     elif val2 >= val3 and val2 <= val1:
@@ -47,12 +46,6 @@ try:
         print("oops ! something wet wrong !")
 except ValueError:
     print(" Wrong input ! ")
-
-
-
-
-
-
 
 
 # alternative with the "input" statement

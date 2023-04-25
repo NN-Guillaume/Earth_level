@@ -8,9 +8,7 @@ arguments = len(sys.argv) - 1
 
 position = 1
 
-while (arguments >= position):
-    #print("Parameter %i: %s" % (position, sys.argv[position]))
+while arguments >= position:
     print(position, sys.argv[position])
     position = position + 1
 
-# What the fuck is this shit ? ! ! !

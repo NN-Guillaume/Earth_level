@@ -24,6 +24,8 @@ else:
     print(" si cette phrase s'affiche, alors j'ai foiré mon programme  :^) ")
 
 print(" Le soleil chante, les oiseaux brillent (et parfois l'inverse aussi) et... ")
-print(" ... après avoir fait la nique à ces FDP (Faux Doctorants en Programmation) d'OpenClassRooms ...")
+print(
+    " ... après avoir fait la nique à ces FDP (Faux Doctorants en Programmation) d'OpenClassRooms ..."
+)
 print("... je me sens un peu fier et heureux d'avoir terminer l'épreuve de la Terre...")
 print("... même s' il faut bien dire que %s " % (randomChoice))

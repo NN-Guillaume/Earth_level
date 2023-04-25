@@ -8,20 +8,20 @@ import sys
 
 try:
     randomNumber = int(sys.argv[1])
-    square = randomNumber**2
+    square = randomNumber ** 2
 
     if randomNumber <= 0:
-        print ("you can't go under 0")
+        print("you can't go under 0")
 
     else:
         result = "%d is the square root of %d" % (square, randomNumber)
-        print (result)
+        print(result)
 
 
 except ValueError:
     print(" Wrong input ! ")
 
-#-------------------------------------------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------------------------------------------------
 
 # alternative with the "input" statement
 """
@@ -45,7 +45,7 @@ for x in range (100):
         break
 """
 
-#-------------------------------------------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------------------------------------------------
 
 """ POUR RAPPEL   --->  la méthode  math.sqrt(\"nombre de base à convertir\")   s'occupe de calculée les racines carrées  ;-) """
 

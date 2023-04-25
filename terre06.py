@@ -8,9 +8,9 @@ try:
     str_to_reverse = str(sys.argv[1])
 
     """ reverse the chain of characters """
+
     def reverseString():
         print(str_to_reverse[::-1])
-
 
     if len(str_to_reverse) <= 1:
         print("Can't reverse this. You must use 2 characters at least")
@@ -19,12 +19,6 @@ try:
         reverseString()
 except ValueError:
     print(" Error ")
-
-
-
-
-
-
 
 
 # alternative with the "input" statement
