@@ -10,7 +10,7 @@
 
 try:
     # Recursive approach to check if an array is sorted or not
-    "NORMALY SORTED LIST - Function return 0 is a pair is found unsorted"
+    "NORMALY SORTED LIST - Function return 0 if a pair is found unsorted"
 
     def sortedOrNot(intList):
 
@@ -23,6 +23,8 @@ try:
 
         # Recursion (the fuck is this ?) applied till last element
         return intList[0] <= intList[1] and sortedOrNot(intList[1:])
+
+
 
     "REVERSE SORTED LIST - Function return 0 is a pair is found unsorted"
 
@@ -38,6 +40,8 @@ try:
         # Recursion (the fuck is this ?) applied till last element
         return intList[0] >= intList[1] and revSortedOrNot(intList[-1:])
 
+
+
     print("Enter as many numbers as you want")
     print("Please, be careful to separate eah number by a space")
     # result example ---> "10 20 30"
@@ -48,18 +52,18 @@ try:
 
     # Display the result
     if sortedOrNot(intList):
-        print(" This shit is really sorted now ?")
+        print("Sorted")
     elif revSortedOrNot(intList):
         print("Sorted but in reverse")
     else:
-        print("fuck this shit, I'm out !")
+        print("Not sorted")
 
 except ValueError:
     print(" NOOOOOOPE ! ")
 
 
-# Gives instructions inside the console (doesn't works)
-"""
+"""# Gives instructions inside the console (unstable)
+
 import sys
 
 # Recursive approach to check if an array is sorted or not
@@ -106,5 +110,5 @@ if sortedOrNot(intList):
 elif revSortedOrNot(intList):
     print("Sorted but in reverse")
 else:
-    print("Fuck this shit, I'm out !")
-"""
+    print("Fuck this shit, I'm out !")"""
+
