@@ -18,8 +18,7 @@ try:
 
     eveningHours = arr.array("i", [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23])
 
-    """ This part analyse the input and convert the hour (only the number) """
-
+    #This part analyse the input and convert the hour (only the number)
     if sillyGrade == "AM":
         for x in morningHours:
             if myHour == morningHours.index(x):
@@ -66,8 +65,7 @@ try:
                 if myHour == 11:
                     newTime[0] = eveningHours[11]
 
-    """ This part of the code here define the AM or PM """
-
+    #This part of the code here define the AM or PM
     if sillyGrade == "AM":
         # remove AM
         newTime.pop(3)
@@ -78,7 +76,7 @@ try:
         newTime.clear()
         print("which moment of the day is this ?  :-)")
 
-    """ Display the final result ! """
+    #Display the final result !
     # turn the array into a string, more eye-friendly to read.
     displayTime = " ".join([str(elem) for elem in newTime])
     # after all that mess, this display the converted hour into the console
@@ -87,6 +85,20 @@ try:
 
 except ValueError:
     print(" Wrong input ! ")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # alternative with the "input" statement

@@ -21,6 +21,24 @@ except ValueError:
     print(" Error ")
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # alternative with the "input" statement
 """
 str_to_reverse = input("enter your chain of characters: ")

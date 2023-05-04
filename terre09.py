@@ -8,7 +8,7 @@ import sys
 
 try:
     randomNumber = int(sys.argv[1])
-    square = randomNumber ** 2
+    square = randomNumber ** 2 #0.5 instead
 
     if randomNumber <= 0:
         print("you can't go under 0")
@@ -21,7 +21,22 @@ try:
 except ValueError:
     print(" Wrong input ! ")
 
-# -------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # alternative with the "input" statement
 """

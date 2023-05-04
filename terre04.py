@@ -21,7 +21,7 @@ while True:
         else:
             pass
 
-        if (userNber % 2) == 1:
+        if (userNber % 2) == 1: # vérif toujours point positif
             print("Impair")
         else:
             print("Pair")
@@ -29,6 +29,15 @@ while True:
     except ValueError:
         print(" NOPE ! That is not an INT !!!")
     break
+
+
+
+
+
+
+
+
+
 
 
 # alternative with the "input" statement

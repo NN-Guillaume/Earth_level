@@ -7,15 +7,13 @@ try:
     a = int(sys.argv[1])
     b = int(sys.argv[2])
 
-    """ do the division and gives the result """
-
+    #do the division and gives the result
     def resultat():
         theResult = a / b
         theResult = int(theResult)
         print("result: %d" % theResult)
 
-    """ calculate the modulo of the division and gives it """
-
+    #calculate the modulo of the division and gives it
     def reste():
         leftover = a % b
         print("leftover: %d" % leftover)
@@ -29,6 +27,14 @@ try:
         reste()
 except ValueError:
     print(" Wrong kind of input ")
+
+
+
+
+
+
+
+
 
 
 # alternative with the "input" statement

@@ -4,9 +4,7 @@
 
 import sys
 
-""" display the alphabet from a given letter """
-
-
+#display the alphabet from a given letter
 def alphabet_from():
     try:
         while 1:

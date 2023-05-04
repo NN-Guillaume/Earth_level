@@ -23,6 +23,20 @@ except ValueError:
     print(" Wrong input ! ")
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # alternative with the "input" statement
 """
 while True:

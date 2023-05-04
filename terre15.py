@@ -1,14 +1,13 @@
 """ TERRE: OK !!! """
 
-# Créer un programme qui célébre ta victoire.
-
-# Exemple: " Jai terminé l'épreuve de la Terre et c'était [insert whatever the fuck you want here]"
+# Créer un programme qui célébre ta victoire... ou PAS  :-D
 
 import random
 
 complain1 = " si CA s'était facile, et ben bordel j'imagine pas la suite ! "
 complain2 = " je ne suis quand même pas rassurer ! "
 complain3 = " on a tous un côté maso et le code est le meilleur moyen de le faire ressortir !  ;-p "
+
 
 randomChoice = random.randint(1, 3)
 if randomChoice == 1:
@@ -22,6 +21,7 @@ elif randomChoice == 3:
     print(complain3)
 else:
     print(" si cette phrase s'affiche, alors j'ai foiré mon programme  :^) ")
+
 
 print(" Le soleil chante, les oiseaux brillent (et parfois l'inverse aussi) et... ")
 print(

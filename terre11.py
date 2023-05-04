@@ -16,7 +16,7 @@ try:
         [00, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
     )
 
-    """ This part analyse the input and convert the hour (only the number) """
+    #This part analyse the input and convert the hour (only the number)
     for x in sillyHour:
         if myHour == sillyHour.index(x):
             # print("sillyHour value is matching !") # ne fonctionne pas à partir de 13h mais detecte deux fois le type 01hxx
@@ -75,6 +75,30 @@ try:
 
 except ValueError:
     print(" Wrong input ! ")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # alternative with the "input" statement

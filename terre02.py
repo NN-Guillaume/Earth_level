@@ -1,8 +1,8 @@
 """ AFFICHEUR D'ARGUMENT """
 
-import sys
+# display the arguments inside a list
 
-# print(sys.argv) # display the arguments inside a list
+import sys
 
 arguments = len(sys.argv) - 1
 

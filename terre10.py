@@ -75,6 +75,21 @@ while loop:
         loop = False
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # alternative with the "input" statement
 """
 while 1:
