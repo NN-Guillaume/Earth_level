@@ -10,14 +10,14 @@ try:
         powerNumber = int(sys.argv[2])
         break
 
-    def powerMath():
+    def power_math():
         powerResult = baseNumber ** powerNumber
         print(powerResult)
 
     if powerNumber <= 0:
         print("negative value are forbiden for the power number")
     else:
-        powerMath()
+        power_math()
 
 except ValueError:
     print(" Wrong input ! ")

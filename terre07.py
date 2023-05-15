@@ -9,10 +9,10 @@ try:
     char_to_count = str(sys.argv[1])
 
     #gives you the length of a string
-    def countString():
+    def count_string():
         print(len(char_to_count))
 
-    countString()
+    count_string()
 except ValueError:
     print(" Error ")
 

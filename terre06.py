@@ -9,14 +9,14 @@ try:
 
     """ reverse the chain of characters """
 
-    def reverseString():
+    def reverse_string():
         print(str_to_reverse[::-1])
 
     if len(str_to_reverse) <= 1:
         print("Can't reverse this. You must use 2 characters at least")
     else:
         print(str_to_reverse)
-        reverseString()
+        reverse_string()
 except ValueError:
     print(" Error ")
 
